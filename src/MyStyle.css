@@ -39,8 +39,13 @@ body {
   visibility: hidden;
 }
 
+.movieCard {
+  transition: all 500ms;
+}
+
 .movieCard:hover {
   cursor: pointer;
+  transform: scale(1.02);
 }
 
 .movieCard .overlay {
