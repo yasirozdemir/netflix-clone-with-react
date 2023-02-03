@@ -5,7 +5,7 @@ import SingleMovie from "./SingleMovie";
 class Movies extends Component {
   state = {
     url: "http://www.omdbapi.com/?i=tt3896198&apikey=83cb8cba&s=",
-    nameOfMoviesToShow: this.props.moviesToShow,
+    moviesToShow: this.props.moviesToShow,
     movies: [],
     isError: false,
     isLoading: true,
@@ -15,12 +15,9 @@ class Movies extends Component {
 
   getMovies = async () => {
     try {
-      const response = await fetch(
-        this.state.url + this.state.nameOfMoviesToShow,
-        {
-          method: "GET",
-        }
-      );
+      const response = await fetch(this.state.url + this.state.moviesToShow, {
+        method: "GET",
+      });
       if (response.ok) {
         const moviesDataRaw = await response.json();
         const moviesData = moviesDataRaw.Search;
