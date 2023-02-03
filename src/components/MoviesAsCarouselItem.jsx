@@ -1,8 +1,7 @@
 import { Component } from "react";
-import { Row, Col, Spinner, Alert } from "react-bootstrap";
-import SingleMovie from "./SingleMovie";
+import { Carousel } from "react-bootstrap";
 
-class Movies extends Component {
+class MoviesAsCarouselItem extends Component {
   state = {
     url: "http://www.omdbapi.com/?i=tt3896198&apikey=83cb8cba&s=",
     moviesToShow: this.props.moviesToShow,
@@ -51,35 +50,17 @@ class Movies extends Component {
 
   render() {
     return (
-      <>
-        {this.state.isLoading && (
-          <Spinner animation="border" variant="secondary" />
-        )}
-        {this.state.isError && (
-          <Alert className="w-75 mx-auto" variant="danger">
-            Someting went wrong loading the moveis!
-          </Alert>
-        )}
-        <Row className="no-gutters justify-content-center">
-          {this.state.movies.map((movieObj) => {
-            return (
-              <Col
-                xs={8}
-                sm={5}
-                md={3}
-                lg={2}
-                xl={1}
-                key={movieObj.imdbID}
-                className="movieCard mx-1 mb-2"
-              >
-                <SingleMovie movieObj={movieObj} />
-              </Col>
-            );
-          })}
-        </Row>
-      </>
+      <Carousel>
+        {this.state.movies.map((movieObj) => {
+          return (
+            <Carousel.Item key={movieObj.imdbID}>
+              <img src={movieObj.Poster} alt={movieObj.Title} />
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
     );
   }
 }
 
-export default Movies;
+export default MoviesAsCarouselItem;
