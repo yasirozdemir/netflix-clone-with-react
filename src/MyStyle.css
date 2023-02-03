@@ -20,3 +20,9 @@ body {
 #navDropdown:focus {
   box-shadow: none;
 }
+
+#genreDropdown {
+  border-color: white;
+  background-color: transparent;
+  color: white;
+}
