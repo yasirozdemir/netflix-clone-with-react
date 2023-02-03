@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Row, Col, Spinner, Alert, Container } from "react-bootstrap";
+import { Row, Col, Spinner, Alert } from "react-bootstrap";
 import SingleMovie from "./SingleMovie";
 
 class Movies extends Component {

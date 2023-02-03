@@ -21,6 +21,10 @@ body {
   box-shadow: none;
 }
 
+.nav-link.d-flex {
+  font-size: 1.2rem;
+}
+
 #genreDropdown {
   border-color: white;
   background-color: transparent;
@@ -96,6 +100,14 @@ body {
   height: 32px;
   padding: 0.5rem;
   box-shadow: 0px 0px 2px 0px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay button:nth-of-type(1) {
+  background-color: white;
+  color: black;
 }
 
 .movieCard:hover .overlay {

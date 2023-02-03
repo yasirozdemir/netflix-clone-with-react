@@ -2,12 +2,14 @@ import { Component } from "react";
 import { Navbar, Nav, Dropdown, NavDropdown } from "react-bootstrap";
 import navLogo from "../assets/netflix_logo.png";
 import navIcon from "../assets/avatar.png";
+import { BiSearch } from "react-icons/bi";
+import { MdNotifications } from "react-icons/md";
 
 class CustomNavbar extends Component {
   render() {
     return (
       <>
-        <Navbar variant="dark" className="text-white" expand="lg">
+        <Navbar variant="dark" className="text-white" expand="md">
           <Navbar.Brand href="#">
             <img className="navLogo w-100" src={navLogo} alt="logo" />
           </Navbar.Brand>
@@ -16,10 +18,20 @@ class CustomNavbar extends Component {
             <Nav className="mr-auto">
               <Nav.Link href="#home">Home</Nav.Link>
             </Nav>
-            <Nav className="ml-auto d-flex align-items-lg-center">
-              <Nav.Link href="#home">Search</Nav.Link>
+            <Nav className="ml-auto d-flex justify-content-center align-items-center">
+              <Nav.Link
+                className="d-flex justify-content-center align-items-center"
+                href="#home"
+              >
+                <BiSearch />
+              </Nav.Link>
               <Nav.Link href="#home">KIDS</Nav.Link>
-              <Nav.Link href="#home">Notifications</Nav.Link>
+              <Nav.Link
+                className="d-flex justify-content-center align-items-center"
+                href="#home"
+              >
+                <MdNotifications />
+              </Nav.Link>
               <NavDropdown
                 variant="outline-secondary"
                 alignRight

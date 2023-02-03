@@ -1,5 +1,7 @@
 import { Component } from "react";
 import { Dropdown, DropdownButton, Button } from "react-bootstrap";
+import { FaAlignJustify } from "react-icons/fa";
+import { MdLocalMovies } from "react-icons/md";
 
 class GenreBar extends Component {
   render() {
@@ -13,11 +15,17 @@ class GenreBar extends Component {
         </DropdownButton>
 
         <div className="ml-auto">
-          <Button className="px-3" variant="outline-light">
-            icon1
+          <Button
+            className="px-3 d-inline-flex justify-content-center align-items-center"
+            variant="outline-light"
+          >
+            <FaAlignJustify />
           </Button>
-          <Button className="ml-1 px-3" variant="outline-light">
-            icon2
+          <Button
+            className="ml-1 px-3  d-inline-flex justify-content-center align-items-center"
+            variant="outline-light"
+          >
+            <MdLocalMovies />
           </Button>
         </div>
       </div>
