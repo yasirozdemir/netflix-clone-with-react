@@ -6,12 +6,7 @@ class GenreBar extends Component {
     return (
       <div className="container-fluid align-items-center d-none d-lg-flex">
         <h2>TV Shows</h2>
-        <DropdownButton
-          className="ml-2"
-          alignLeft
-          title="Movies"
-          id="genreDropdown"
-        >
+        <DropdownButton className="ml-2" title="Movies" id="genreDropdown">
           <Dropdown.Item eventKey="1">Harry Potter</Dropdown.Item>
           <Dropdown.Item eventKey="2">Sherlock Holmes</Dropdown.Item>
           <Dropdown.Item eventKey="3">The Lord of the Rings</Dropdown.Item>

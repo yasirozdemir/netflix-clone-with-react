@@ -3,12 +3,16 @@ import "./MyStyle.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CustomNavbar from "./components/CustomNavbar";
 import GenreBar from "./components/GenreBar";
+import MovieCarousel from "./components/MovieCarousel";
 
 function App() {
   return (
     <div className="App">
       <CustomNavbar />
-      <GenreBar />{" "}
+      <GenreBar />
+      <MovieCarousel moviesToShow="Harry Potter" />
+      {/* <MovieCarousel moviesToShow="Sherlock Holmes" />
+      <MovieCarousel moviesToShow="The Lord of the Rings" /> */}
     </div>
   );
 }
