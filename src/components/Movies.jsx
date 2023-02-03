@@ -48,9 +48,9 @@ class Movies extends Component {
     }
   };
 
-  // componentDidMount() {
-  //   this.getMovies();
-  // }
+  componentDidMount() {
+    this.getMovies();
+  }
 
   render() {
     return (

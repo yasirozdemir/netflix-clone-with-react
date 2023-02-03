@@ -103,9 +103,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 300ms;
 }
 
 .overlay button:nth-of-type(1) {
+  background-color: white;
+  color: black;
+}
+
+.overlay button:nth-of-type(1):hover {
+  background-color: black;
+  color: white;
+}
+
+.overlay button:hover {
   background-color: white;
   color: black;
 }
