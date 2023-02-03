@@ -5,7 +5,7 @@ import Movies from "./Movies";
 class MovieCarousel extends Component {
   render() {
     return (
-      <Container fluid>
+      <Container fluid className="mb-4">
         <h5 className="text-left">{this.props.moviesToShow}</h5>
         <Container fluid className="mt-sm-1 mt-md-2 mt-lg-3 px-0">
           {/* <Carousel>

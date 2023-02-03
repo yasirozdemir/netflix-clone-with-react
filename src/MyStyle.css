@@ -115,3 +115,16 @@ body {
   visibility: visible;
   opacity: 100%;
 }
+
+#footer .col-3 {
+  align-items: start;
+}
+
+#footer > .row:nth-of-type(1) .col {
+  display: flex;
+  font-size: 1.2rem;
+}
+
+#footer > a {
+  max-width: 110px;
+}
