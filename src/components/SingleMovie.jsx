@@ -15,7 +15,10 @@ class SingleMovie extends Component {
           className="w-100 rounded-sm"
         />
         <div className="overlay d-flex flex-column justify-content-between">
-          <h4>{this.props.movieObj.Title}</h4>
+          <div>
+            <h4>{this.props.movieObj.Title}</h4>
+            <h6>{this.props.movieObj.Year}</h6>
+          </div>
           <div className="d-flex align-items-center justify-content-start">
             <button>
               {" "}
