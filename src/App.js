@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <CustomNavbar />
       <GenreBar />
-      <MovieCarousel moviesToShow="Harry Potter" />
-      {/* <MovieCarousel moviesToShow="Sherlock Holmes" />
+      <MovieCarousel moviesToShow="Sherlock Holmes" />
+      {/* <MovieCarousel moviesToShow="Harry Potter" />
       <MovieCarousel moviesToShow="The Lord of the Rings" /> */}
     </div>
   );

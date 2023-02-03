@@ -9,6 +9,8 @@ class Movies extends Component {
     movies: [],
     isError: false,
     isLoading: true,
+    startIndex: this.props.startIndex,
+    endIndex: this.props.endIndex,
   };
 
   getMovies = async () => {
@@ -52,11 +54,19 @@ class Movies extends Component {
 
   render() {
     return (
-      <Row className="no-gutters">
+      <Row className="no-gutters justify-content-center justify-content-xl-between">
         {this.state.movies.map((movieObj) => {
           return (
-            <Col className="mx-1">
-              <SingleMovie key={movieObj.imdbID} movieObj={movieObj} />
+            <Col
+              xs={8}
+              sm={5}
+              md={3}
+              lg={2}
+              xl={1}
+              key={movieObj.imdbID}
+              className="mx-1 mb-2 mb-xl-0"
+            >
+              <SingleMovie movieObj={movieObj} />
             </Col>
           );
         })}

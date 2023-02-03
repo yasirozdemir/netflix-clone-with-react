@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Container /* Carousel */ } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Movies from "./Movies";
 
 class MovieCarousel extends Component {
@@ -7,10 +7,13 @@ class MovieCarousel extends Component {
     return (
       <Container fluid>
         <h5 className="text-left">{this.props.moviesToShow}</h5>
-        <Container fluid className="mt-sm-1 mt-md-2 mt-lg-3">
+        <Container fluid className="mt-sm-1 mt-md-2 mt-lg-3 px-0">
           {/* <Carousel>
-            <Carousel.Item></Carousel.Item>
-            <Carousel.Item></Carousel.Item>
+            <Carousel.Item>
+              <Movies
+                moviesToShow={this.props.moviesToShow}
+              />
+            </Carousel.Item>
             <Carousel.Item></Carousel.Item>
           </Carousel> */}
           <Movies moviesToShow={this.props.moviesToShow} />
