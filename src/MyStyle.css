@@ -1,0 +1,22 @@
+body {
+  background-color: black !important;
+  color: white !important;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.navLogo,
+.navIcon {
+  height: 2rem;
+}
+
+#navDropdown {
+  background-color: transparent;
+  border: none;
+}
+
+#navDropdown:focus {
+  box-shadow: none;
+}
