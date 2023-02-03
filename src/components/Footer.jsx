@@ -85,7 +85,9 @@ class Footer extends Component {
           >
             Service Code
           </a>
-          <p class="mr-auto text-secondary mt-2">© 1997-2019 Netflix, Inc.</p>
+          <p className="mr-auto text-secondary mt-2">
+            © 1997-2019 Netflix, Inc.
+          </p>
         </Container>
       </>
     );
