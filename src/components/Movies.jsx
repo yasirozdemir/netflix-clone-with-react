@@ -52,12 +52,9 @@ class Movies extends Component {
   render() {
     return (
       <>
-        {this.state.isLoading && (
-          <Spinner animation="border" variant="secondary" />
-        )}
         {this.state.isError && (
           <Alert className="w-75 mx-auto" variant="danger">
-            Someting went wrong loading the moveis!
+            Something went wrong loading the moveis!
           </Alert>
         )}
         <Row className="no-gutters justify-content-center">
@@ -71,6 +68,9 @@ class Movies extends Component {
                 key={movieObj.imdbID}
                 className="movieCard mx-1 mb-2"
               >
+                {this.state.isLoading && (
+                  <Spinner animation="border" variant="secondary" />
+                )}
                 <SingleMovie movieObj={movieObj} />
               </Col>
             );
