@@ -41,11 +41,10 @@ body {
 
 .movieCard .overlay {
   position: absolute;
-  top: 75%;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgb(0, 0, 0);
   transition: all 500ms;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
@@ -53,9 +52,35 @@ body {
   padding: 0.5rem;
   visibility: hidden;
   opacity: 0%;
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.3) 37%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.30154068463322825) 63%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.3) 37%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.30154068463322825) 63%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.3) 37%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.30154068463322825) 63%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .movieCard .overlay {
     top: 70%;
   }
@@ -83,12 +108,16 @@ body {
   .movieCard .overlay {
     top: 68%;
   }
-}
+} */
 
-.overlay h6 {
+/* .overlay h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+} */
+
+.overlay h4 {
+  font-weight: 700;
 }
 
 .overlay button {
@@ -122,7 +151,7 @@ body {
 }
 
 .movieCard:hover .overlay {
-  transform: translateY(100%);
+  /* transform: translateY(100%); */
   visibility: visible;
   opacity: 100%;
 }
