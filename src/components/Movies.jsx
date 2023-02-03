@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Spinner, Alert, Container } from "react-bootstrap";
 import SingleMovie from "./SingleMovie";
 
 class Movies extends Component {
@@ -54,23 +54,32 @@ class Movies extends Component {
 
   render() {
     return (
-      <Row className="no-gutters justify-content-center justify-content-xl-between">
-        {this.state.movies.map((movieObj) => {
-          return (
-            <Col
-              xs={8}
-              sm={5}
-              md={3}
-              lg={2}
-              xl={1}
-              key={movieObj.imdbID}
-              className="mx-1 mb-2 mb-xl-0"
-            >
-              <SingleMovie movieObj={movieObj} />
-            </Col>
-          );
-        })}
-      </Row>
+      <>
+        {this.state.isLoading && (
+          <Spinner animation="border" variant="secondary" />
+        )}
+        {this.state.isError && (
+          <Alert className="w-75 mx-auto" variant="danger">
+            Someting went wrong loading the moveis!
+          </Alert>
+        )}
+        <Row className="no-gutters justify-content-center">
+          {this.state.movies.map((movieObj) => {
+            return (
+              <Col
+                xs={8}
+                sm={5}
+                md={3}
+                lg={2}
+                key={movieObj.imdbID}
+                className="movieCard mx-1 mb-2"
+              >
+                <SingleMovie movieObj={movieObj} />
+              </Col>
+            );
+          })}
+        </Row>
+      </>
     );
   }
 }
