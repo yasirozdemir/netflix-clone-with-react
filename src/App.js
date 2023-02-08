@@ -6,13 +6,16 @@ import GenreBar from "./components/GenreBar";
 import MovieCarousel from "./components/MovieCarousel";
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <CustomNavbar />
-        <GenreBar />
+        <Routes>
+          <Route path="/" element={<GenreBar />} />
+        </Routes>
         <Routes>
           <Route
             path="/"
@@ -21,10 +24,7 @@ function App() {
           {/* <MovieCarousel moviesToShow="Harry Potter" />
       <MovieCarousel moviesToShow="The Lord of the Rings" /> */}
           <Route path="/tvshows" element={<h1>tvshows</h1>} />
-          <Route
-            path="/moviedetails/:movieID"
-            element={<h1>moviedetails</h1>}
-          />
+          <Route path="/moviedetails/:movieID" element={<MovieDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>
