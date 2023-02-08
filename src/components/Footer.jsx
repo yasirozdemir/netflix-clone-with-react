@@ -28,7 +28,7 @@ class Footer extends Component {
               </a>
             </Col>
           </Row>
-          <Row className="mt-2">
+          <Row className="mt-2 text-left">
             <Col xs={3} className="d-flex flex-column">
               <a href="#!" className="text-secondary">
                 Audio and Subtitles
