@@ -5,9 +5,12 @@ import navIcon from "../assets/avatar.png";
 import { BiSearch } from "react-icons/bi";
 import { MdNotifications } from "react-icons/md";
 import { Link } from "react-router-dom";
+import withRouter from "../helpers/withRouter";
 
 class CustomNavbar extends Component {
   render() {
+    const location = this.props.location.pathname;
+    console.log(location);
     return (
       <>
         <Navbar variant="dark" className="text-white" expand="md">
@@ -17,10 +20,18 @@ class CustomNavbar extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Link to="/" className="nav-link">
+              <Link
+                to="/"
+                className={location === "/" ? "nav-link active" : "nav-link"}
+              >
                 Home
               </Link>
-              <Link to="/tvshows" className="nav-link">
+              <Link
+                to="/tvshows"
+                className={
+                  location === "/tvshows" ? "nav-link active" : "nav-link"
+                }
+              >
                 Tv Shows
               </Link>
             </Nav>
@@ -67,4 +78,4 @@ class CustomNavbar extends Component {
   }
 }
 
-export default CustomNavbar;
+export default withRouter(CustomNavbar);
