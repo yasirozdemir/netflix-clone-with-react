@@ -1,11 +1,21 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Container, Row, Col, ListGroup } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  ListGroup,
+  Spinner,
+  Alert,
+} from "react-bootstrap";
 
 const MovieDetails = () => {
   const params = useParams();
   const movieID = params.movieID;
+
   const [movie, setMovie] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   const url = "http://www.omdbapi.com/?apikey=83cb8cba&i=";
 
@@ -15,11 +25,14 @@ const MovieDetails = () => {
       if (response.ok) {
         const rawMovie = await response.json();
         setMovie(rawMovie);
+        setIsLoading(false);
       } else {
         console.log("error");
+        setIsError(true);
       }
     } catch (error) {
       console.error(error);
+      setIsError(true);
     }
   };
 
@@ -31,12 +44,20 @@ const MovieDetails = () => {
   return (
     <>
       <Container>
+        {isLoading && <Spinner animation="border" role="status"></Spinner>}
+        {isError && (
+          <Alert variant="danger">
+            Something went wrong loading details of {movie.Title}
+          </Alert>
+        )}
         <Row>
           <Col>
-            <h3>{movie.Title}</h3>
+            <h3>
+              {movie.Title} ({movie.Year})
+            </h3>
           </Col>
         </Row>
-        <Row>
+        <Row className="mt-3">
           <Col className="mx-auto" md={6} lg={4}>
             <img src={movie.Poster} alt="movie poster" className="w-75" />
           </Col>

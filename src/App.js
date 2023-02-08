@@ -21,10 +21,20 @@ function App() {
             path="/"
             element={<MovieCarousel moviesToShow="Sherlock Holmes" />}
           />
-          {/* <MovieCarousel moviesToShow="Harry Potter" />
-      <MovieCarousel moviesToShow="The Lord of the Rings" /> */}
-          <Route path="/tvshows" element={<h1>tvshows</h1>} />
+          <Route path="/tvshows" element={<h1>TV Shows</h1>} />
           <Route path="/moviedetails/:movieID" element={<MovieDetails />} />
+        </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={<MovieCarousel moviesToShow="Harry Potter" />}
+          ></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={<MovieCarousel moviesToShow="The Lord of the Rings" />}
+          ></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
