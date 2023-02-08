@@ -187,3 +187,7 @@ body {
 #movieDataList .list-group-item span:nth-last-child(1) {
   text-align: right;
 }
+
+#movieDataList .list-group-item:nth-of-type(2n) {
+  background-color: rgba(168, 168, 168, 0.048);
+}
