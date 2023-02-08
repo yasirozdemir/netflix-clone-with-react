@@ -11,9 +11,9 @@ class CustomNavbar extends Component {
     return (
       <>
         <Navbar variant="dark" className="text-white" expand="md">
-          <Navbar.Brand href="#">
+          <Link to="/" className="navbar-brand">
             <img className="navLogo w-100" src={navLogo} alt="logo" />
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

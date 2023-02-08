@@ -177,3 +177,13 @@ body {
 #footer > a {
   max-width: 110px;
 }
+
+#movieDataList .list-group-item {
+  background-color: transparent;
+  display: flex;
+  text-align: left;
+}
+
+#movieDataList .list-group-item span:nth-last-child(1) {
+  text-align: right;
+}
