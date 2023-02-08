@@ -4,6 +4,7 @@ import navLogo from "../assets/netflix_logo.png";
 import navIcon from "../assets/avatar.png";
 import { BiSearch } from "react-icons/bi";
 import { MdNotifications } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 class CustomNavbar extends Component {
   render() {
@@ -16,7 +17,12 @@ class CustomNavbar extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+              <Link to="/tvshows" className="nav-link">
+                Tv Shows
+              </Link>
             </Nav>
             <Nav className="ml-auto d-flex justify-content-center align-items-center">
               <Nav.Link

@@ -1,9 +1,11 @@
 import { Component } from "react";
 import { Container } from "react-bootstrap";
 import Movies from "./Movies";
+import withRouter from "../helpers/withRouter";
 
 class MovieCarousel extends Component {
   render() {
+    console.log(this.props);
     return (
       <Container fluid className="mb-4">
         <h5 className="text-left">{this.props.moviesToShow}</h5>
@@ -27,4 +29,4 @@ class MovieCarousel extends Component {
   }
 }
 
-export default MovieCarousel;
+export default withRouter(MovieCarousel);
