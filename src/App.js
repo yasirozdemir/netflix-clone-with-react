@@ -14,27 +14,20 @@ function App() {
       <BrowserRouter>
         <CustomNavbar />
         <Routes>
-          <Route path="/" element={<GenreBar />} />
-        </Routes>
-        <Routes>
           <Route
             path="/"
-            element={<MovieCarousel moviesToShow="Sherlock Holmes" />}
+            element={
+              <>
+                <GenreBar />
+                <MovieCarousel moviesToShow="Sherlock Holmes" />
+                <MovieCarousel moviesToShow="Harry Potter" />
+                <MovieCarousel moviesToShow="The Lord of the Rings" />
+              </>
+            }
           />
-          <Route path="/tvshows" element={<h1>TV Shows</h1>} />
-          <Route path="/moviedetails/:movieID" element={<MovieDetails />} />
-        </Routes>
-        <Routes>
-          <Route
-            path="/"
-            element={<MovieCarousel moviesToShow="Harry Potter" />}
-          ></Route>
-        </Routes>
-        <Routes>
-          <Route
-            path="/"
-            element={<MovieCarousel moviesToShow="The Lord of the Rings" />}
-          ></Route>
+          <Route element={<h1>TV Shows</h1>} path="/tvshows" />
+          <Route element={<MovieDetails />} path="/moviedetails/:movieID" />
+          <Route element={<h1>404 Page Not Found</h1>} path="*" />
         </Routes>
         <Footer />
       </BrowserRouter>
