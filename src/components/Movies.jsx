@@ -58,7 +58,7 @@ class Movies extends Component {
           </Alert>
         )}
         <Row className="no-gutters justify-content-center">
-          {this.state.movies.map((movieObj) => {
+          {this.state.movies.splice(0, 5).map((movieObj) => {
             return (
               <Col
                 xs={8}
