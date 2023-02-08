@@ -10,7 +10,6 @@ import withRouter from "../helpers/withRouter";
 class CustomNavbar extends Component {
   render() {
     const location = this.props.location.pathname;
-    console.log(location);
     return (
       <>
         <Navbar variant="dark" className="text-white" expand="md">

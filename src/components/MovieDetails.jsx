@@ -96,6 +96,11 @@ const MovieDetails = () => {
             </ListGroup>
           </Col>
         </Row>
+        {/* <Row>
+          <Col>
+            <h4>Comments</h4>
+          </Col>
+        </Row> */}
       </Container>
     </>
   );
